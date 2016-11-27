@@ -30,7 +30,8 @@ $(function() {
 
         it('every url in Array is defined',function () {
             for (var i = 0;i<allFeeds.length;i++){
-                expect(allFeeds[i].url).toBeDefined()
+                expect(allFeeds[i].url).toBeDefined();
+                expect(allFeeds[i].url.length).not.toEqual(0);
             }
         });
 
@@ -38,7 +39,7 @@ $(function() {
         it('name propertyi is defined and is not empty in allFeeds Array',function () {
             for (var i = 0;i<allFeeds.length;i++){
                 expect(allFeeds[i].name).toBeDefined();
-                expect(allFeeds[i].name.length).not.toEqual(0)
+                expect(allFeeds[i].name.length).not.toEqual(0);
             }
 
         });
